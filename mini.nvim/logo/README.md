@@ -5,7 +5,7 @@ convert logo_*_pixels.gif -filter point -set filename:fn '%[basename]-big' -resi
 # Then bulk rename 'logo_xxx_pixels-big.gif' into 'logo_xxx.gif'.
 ```
 
-Code to conver pixel logos to logos with size 1280x640 pixels and same aspect ratio but transparent padding (for Github social preview):
+Code to convert pixel logos to logos with size 1280x640 pixels and same aspect ratio but transparent padding (for Github social preview):
 
 ```
 convert logo_*_pixels.gif -filter point -background none -resize 1280x^1 -gravity center -extent 1280x640 -set filename:fn '%[basename]-github' '%[filename:fn].png'
