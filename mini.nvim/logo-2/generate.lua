@@ -1,5 +1,6 @@
--- Create logo files based on the font files in 'font/' subdirectory
--- Requires `imagemagick`
+-- Create logo files based on the font files in 'font/' subdirectory.
+-- To generate, run `nvim --clean -c 'source generate.lua' -c 'quit!'`
+-- from 'logo-2/' directory. Requires `imagemagick`.
 local make_logo = function(output_basename, letter_filenames)
   -- Main "pixel art" file
   local cmd_pixels = { 'magick', 'font/prefix.gif' }
@@ -14,7 +15,8 @@ local make_logo = function(output_basename, letter_filenames)
   local cmd_readme = {
     'convert', output_pixels,
     '-filter', 'point',
-    '-resize', '^1x100',
+    -- NOTE: Use 105 because it is a multiple of 7 (height of "pixel" version)
+    '-resize', '^1x105',
     output_basename .. '_readme.png',
   }
   vim.system(cmd_readme):wait()
