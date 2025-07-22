@@ -1,0 +1,10 @@
+Colors:
+- Foreground is a gradient from #b3dbf7 (OKLch 85-6-240) to #d4d4d4 (OKLch 85-0-240)
+- Background is a gradient from #00253b (OKLch 15-6-240) to #222222 (OKLch 15-0-240)
+- Gradients are linear, in "Perceptual RGB" color space, strictly from left to right *of inner "E"* (this makes left and right of "E" be exactly the target colors).
+
+Masks:
+- 'EC2' and 'EC2_circle' are the main colored rectangular and circular logo vairants.
+- 'EC2_mask' is the black-and-white logo version that can also be used as transparency mask.
+- 'EC2_mask_fg' is the foreground layer of the logo with transparent background. Can be used as a foreground layer directly.
+- 'EC2_mask_rect' is the baseline rectangular logo from which a centered circle with radius 450 was cut. Might be useful to recut the circular shape later.
